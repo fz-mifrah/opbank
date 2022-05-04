@@ -1,0 +1,53 @@
+application {
+  config {
+    baseName library,
+    applicationType monolith,
+    authenticationType jwt
+    packageName com.sgaraba.library,
+    prodDatabaseType postgresql,
+    cacheProvider hazelcast,
+    buildTool maven,
+    clientFramework angular,
+    testFrameworks [cypress],
+	nativeLanguage en,
+    languages [en, fr, ar]
+  }
+  entities *
+}
+
+entity Client {
+    cin String required,
+    nom String required,
+    prenom String required,
+    adress String required,
+    postalCode Long required,
+    dateNaissence Instant required,
+    email String required
+}
+
+entity Compte {
+	rib Long required,
+    dateOuvertur Instant ,
+    code Integer required
+}
+
+entity Banque {
+	nom String required,
+	adresse String,
+	email String required
+}
+
+entity CarteBancaire {
+	numCompte String required,
+    
+}
+
+relationship OneToOne {
+	Client{compte} to Compte{Client(nom) },
+    Compte{nom} to CarteBancaire,
+}
+
+relationship OneToMany {
+    Banque{compte} to Compte  
+}
+
