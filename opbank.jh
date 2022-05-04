@@ -1,0 +1,26 @@
+
+entity Client {
+    cin String required,
+    nom String required,
+    prenom String required,
+    adress String required,
+    postalCode Long required,
+    dateNaissence Instant required,
+    email String required
+}
+
+entity Compte {
+	rib Long required,
+    dateOuvertur Instant ,
+    code Integer required
+}
+
+
+
+
+
+relationship OneToOne {
+	Client{compte} to Compte{Client(nom) },
+}
+
+
