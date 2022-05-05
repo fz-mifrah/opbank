@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.6.xsd">
+    <!--
+        Added the constraints for entity Operation.
+    -->
+    <changeSet id="20220505172647-2" author="jhipster">
+
+        <addForeignKeyConstraint baseColumnNames="type_operation_id"
+                                 baseTableName="operation"
+                                 constraintName="fk_operation__type_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="virement"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_operation_id"
+                                 baseTableName="operation"
+                                 constraintName="fk_operation__type_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="transfer"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_operation_id"
+                                 baseTableName="operation"
+                                 constraintName="fk_operation__type_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="recharge"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_operation_id"
+                                 baseTableName="operation"
+                                 constraintName="fk_operation__type_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="paiment_facture"/>
+
+        <addForeignKeyConstraint baseColumnNames="type_operation_id"
+                                 baseTableName="operation"
+                                 constraintName="fk_operation__type_operation_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="compte"/>
+    </changeSet>
+</databaseChangeLog>

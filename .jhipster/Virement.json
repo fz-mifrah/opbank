@@ -1,0 +1,28 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505172747",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virement",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Virement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "typeOperation",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

@@ -1,0 +1,29 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505173147",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "recharge",
+  "fields": [
+    {
+      "fieldName": "numTel",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Recharge",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "typeOperation",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
