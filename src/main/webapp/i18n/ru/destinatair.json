@@ -1,0 +1,26 @@
+{
+  "libraryApp": {
+    "destinatair": {
+      "home": {
+        "title": "Destinatairs",
+        "refreshListLabel": "Обновить список",
+        "createLabel": "Создать новый Destinatair",
+        "createOrEditLabel": "Создать или отредактировать Destinatair",
+        "notFound": "Destinatairs не найдено"
+      },
+      "created": "Новый Destinatair создан с идентификатором {{ param }}",
+      "updated": "Destinatair обновлен с идентификатором {{ param }}",
+      "deleted": "Destinatair удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Destinatair {{ id }}?"
+      },
+      "detail": {
+        "title": "Destinatair"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "rib": "Rib"
+    }
+  }
+}
