@@ -1,0 +1,46 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505164803",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "compte",
+  "fields": [
+    {
+      "fieldName": "rib",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "dateOuvertur",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "code",
+      "fieldType": "Integer",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Compte",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "carteBancaire",
+      "otherEntityRelationshipName": "compte",
+      "ownerSide": true,
+      "relationshipName": "nom",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityField": "nom",
+      "otherEntityName": "client",
+      "otherEntityRelationshipName": "nom",
+      "ownerSide": false,
+      "relationshipName": "client",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
