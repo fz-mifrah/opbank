@@ -1,0 +1,52 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="compte">
+      <h2 data-cy="compteDetailsHeading"><span jhiTranslate="libraryApp.compte.detail.title">Compte</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ compte.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.compte.rib">Rib</span></dt>
+        <dd>
+          <span>{{ compte.rib }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.compte.dateOuverture">Date Ouverture</span></dt>
+        <dd>
+          <span>{{ compte.dateOuverture | formatMediumDate }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.compte.code">Code</span></dt>
+        <dd>
+          <span>{{ compte.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.compte.rib">Rib</span></dt>
+        <dd>
+          <div *ngIf="compte.rib">
+            <a [routerLink]="['/carte-bancaire', compte.rib?.id, 'view']">{{ compte.rib?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.compte.dateOuverture">Date Ouverture</span></dt>
+        <dd>
+          <div *ngIf="compte.dateOuverture">
+            <a [routerLink]="['/banque', compte.dateOuverture?.id, 'view']">{{ compte.dateOuverture?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/compte', compte.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
