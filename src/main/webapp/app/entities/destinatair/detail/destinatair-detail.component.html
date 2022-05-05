@@ -1,0 +1,46 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="destinatair">
+      <h2 data-cy="destinatairDetailsHeading"><span jhiTranslate="libraryApp.destinatair.detail.title">Destinatair</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ destinatair.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.destinatair.nom">Nom</span></dt>
+        <dd>
+          <span>{{ destinatair.nom }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.destinatair.prenom">Prenom</span></dt>
+        <dd>
+          <span>{{ destinatair.prenom }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.destinatair.rib">Rib</span></dt>
+        <dd>
+          <span>{{ destinatair.rib }}</span>
+        </dd>
+        <dt><span jhiTranslate="libraryApp.destinatair.rib">Rib</span></dt>
+        <dd>
+          <div *ngIf="destinatair.rib">
+            <a [routerLink]="['/virement', destinatair.rib?.id, 'view']">{{ destinatair.rib?.id }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/destinatair', destinatair.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>
