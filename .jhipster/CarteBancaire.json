@@ -1,0 +1,21 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505165157",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "carte_bancaire",
+  "fields": [
+    {
+      "fieldName": "numCompte",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "CarteBancaire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
