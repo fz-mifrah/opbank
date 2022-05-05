@@ -1,0 +1,20 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505170646",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virement",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Virement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

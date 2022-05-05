@@ -1,0 +1,53 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505170546",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "operation",
+  "fields": [
+    {
+      "fieldName": "numOperation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "typeOperatin",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "etatOperation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Operation",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virement",
+      "otherEntityRelationshipName": "operation",
+      "ownerSide": true,
+      "relationshipName": "virement",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "compte",
+      "otherEntityRelationshipName": "rib",
+      "relationshipName": "typeOperation",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}
