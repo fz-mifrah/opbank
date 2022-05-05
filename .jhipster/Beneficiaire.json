@@ -1,0 +1,26 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505170000",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "beneficiaire",
+  "fields": [
+    {
+      "fieldName": "nomPrenom",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "numCompte",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Beneficiaire",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}

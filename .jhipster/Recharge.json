@@ -1,0 +1,21 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505170300",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "recharge",
+  "fields": [
+    {
+      "fieldName": "numTel",
+      "fieldType": "Long",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Recharge",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [],
+  "service": "no"
+}
