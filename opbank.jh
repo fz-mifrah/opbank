@@ -1,0 +1,18 @@
+application {
+  config {
+    baseName opbank,
+    applicationType monolith,
+    authenticationType jwt,
+    packageName com.igaopbanque.myapps,
+    prodDatabaseType postgresql,
+    cacheProvider hazelcast,
+    buildTool maven,
+    clientFramework angular,
+    testFrameworks [cypress],
+	nativeLanguage en,
+    languages [en, fr, ar]
+  }
+  entities *
+}
+
+
