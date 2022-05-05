@@ -1,0 +1,26 @@
+{
+  "libraryApp": {
+    "destinatair": {
+      "home": {
+        "title": "Destinatairs",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Creeare o nouă entitate Destinatair",
+        "createOrEditLabel": "Creeare sau editare Destinatair",
+        "notFound": "No Destinatairs found"
+      },
+      "created": "A fost creată o nouă entitate Destinatair cu identificatorul {{ param }}",
+      "updated": "Destinatair cu identificatorul {{ param }} a fost actualizată",
+      "deleted": "Destinatair cu identificatorul {{ param }} a fost ștearsă",
+      "delete": {
+        "question": "Sunteți sigur că doriți să ștergeți Destinatair {{ id }}?"
+      },
+      "detail": {
+        "title": "Destinatair"
+      },
+      "id": "ID",
+      "nom": "Nom",
+      "prenom": "Prenom",
+      "rib": "Rib"
+    }
+  }
+}
