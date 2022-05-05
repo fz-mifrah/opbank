@@ -1,0 +1,73 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505173434",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "operation",
+  "fields": [
+    {
+      "fieldName": "numOperation",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "date",
+      "fieldType": "LocalDate"
+    },
+    {
+      "fieldName": "typeOperatin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "etatOperation",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "montant",
+      "fieldType": "Double",
+      "fieldValidateRules": ["required"]
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Operation",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "virement",
+      "otherEntityRelationshipName": "operation",
+      "ownerSide": true,
+      "relationshipName": "typeOperation",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "transfer",
+      "otherEntityRelationshipName": "operation",
+      "ownerSide": true,
+      "relationshipName": "typeOperation",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "recharge",
+      "otherEntityRelationshipName": "operation",
+      "ownerSide": true,
+      "relationshipName": "typeOperation",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "paimentFacture",
+      "otherEntityRelationshipName": "operation",
+      "ownerSide": true,
+      "relationshipName": "typeOperation",
+      "relationshipType": "one-to-one"
+    },
+    {
+      "otherEntityName": "compte",
+      "otherEntityRelationshipName": "rib",
+      "relationshipName": "typeOperation",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "no"
+}

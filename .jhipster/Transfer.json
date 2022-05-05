@@ -1,0 +1,38 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505173834",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "transfer",
+  "fields": [
+    {
+      "fieldName": "cinDestinataireII",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "nomPrenomDestinataireII",
+      "fieldType": "String",
+      "fieldValidateRules": ["required"]
+    },
+    {
+      "fieldName": "telDestinataireII",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Transfer",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "typeOperation",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}

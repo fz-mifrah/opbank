@@ -1,0 +1,42 @@
+{
+  "applications": ["library"],
+  "changelogDate": "20220505173534",
+  "dto": "no",
+  "embedded": false,
+  "entityTableName": "virement",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Virement",
+  "pagination": "no",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityField": "rib",
+      "otherEntityName": "destinatair",
+      "otherEntityRelationshipName": "rib",
+      "relationshipName": "destinataire",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityField": "nomPrenom",
+      "otherEntityName": "beneficiaire",
+      "otherEntityRelationshipName": "numCompte",
+      "relationshipName": "beneficiaire",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "operation",
+      "otherEntityRelationshipName": "typeOperation",
+      "ownerSide": false,
+      "relationshipName": "operation",
+      "relationshipType": "one-to-one"
+    }
+  ],
+  "service": "no"
+}
